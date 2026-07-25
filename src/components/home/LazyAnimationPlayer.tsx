@@ -14,7 +14,7 @@ const LazyAnimationPlayer: React.FC<LazyAnimationPlayerProps> = ({
   width = '100%', 
   height = '300px' 
 }) => {
-  const [animationData, setAnimationData] = useState(null);
+  const [animationData, setAnimationData] = useState<Record<string, unknown> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -22,15 +22,13 @@ const LazyAnimationPlayer: React.FC<LazyAnimationPlayerProps> = ({
     const loadAnimation = async () => {
       try {
         setIsLoading(true);
-        let data;
-        
-        if (animationType === 'search') {
-          data = await import('../../assets/search-animation.json');
-        } else if (animationType === 'greenboard') {
-          data = await import('../../assets/greenboard-animation.json');
-        }
-        
-        setAnimationData(data?.default || data);
+
+        const data =
+          animationType === 'search'
+            ? await import('../../assets/search-animation.json')
+            : await import('../../assets/greenboard-animation.json');
+
+        setAnimationData(data.default);
       } catch (err) {
         console.error('Failed to load animation:', err);
         setError(true);

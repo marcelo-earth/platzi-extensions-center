@@ -140,6 +140,7 @@ function HeroSection() {
                 src={platkeyinstalled.src}
                 width={platkeyinstalled.width}
                 height={platkeyinstalled.height}
+                alt=""
                 className="h-72"
                 aria-hidden="true"
               />

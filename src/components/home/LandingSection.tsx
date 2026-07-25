@@ -92,6 +92,9 @@ const AnimationPlaceholder = ({ height = '300px' }: { height?: string }) => (
 );
 
 function LandingSection() {
+  const featureClassNames = 'flex flex-col justify-center items-center min-h-auto';
+  const [keyPressed, setKeyPressed] = useState<string>('');
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const key = event.key.toLowerCase();
@@ -104,9 +107,6 @@ function LandingSection() {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
-
-  const featureClassNames = 'flex flex-col justify-center items-center min-h-auto';
-  const [keyPressed, setKeyPressed] = useState<string>('');
 
   // Intersection observer hooks for lazy loading
   const { ref: greenboardRef, inView: greenboardInView } = useInView({
