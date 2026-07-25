@@ -11,8 +11,13 @@ const nextConfig = {
     return [
       // Spanish is the default locale and has no /es/ prefix; keep old /es/* links alive.
       {
-        source: '/es/:path*',
-        destination: '/:path*',
+        source: '/es',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/es/:path+',
+        destination: '/:path+',
         permanent: true,
       },
       // Legacy alias domain.
