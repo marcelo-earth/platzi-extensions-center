@@ -3,7 +3,7 @@ import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing, type AppLocale } from '@/i18n/routing';
-import { buildMetadata } from '@/lib/metadata';
+import { buildMetadata, PAGE_PATHS } from '@/lib/metadata';
 import HeroSection from '@/components/home/HeroSection';
 import LandingSection from '@/components/home/LandingSection';
 import FaqSection from '@/components/home/FaqSection';
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return buildMetadata({
     locale: locale as AppLocale,
-    pathnames: { es: '/', en: '/en/' },
+    pathnames: PAGE_PATHS.home,
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),

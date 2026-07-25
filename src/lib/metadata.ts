@@ -5,6 +5,14 @@ export const SITE_URL = 'https://platkey.astronware.com';
 export const SITE_NAME = 'Platzi Extension';
 export const TWITTER_HANDLE = '@marcelo_earth';
 
+/** Absolute path per locale for every page on the site. Single source of truth for
+ * canonical/hreflang metadata and the generated sitemap. */
+export const PAGE_PATHS = {
+  home: { es: '/', en: '/en/' },
+  love: { es: '/love/', en: '/en/love/' },
+  privacy: { es: '/privacy/', en: '/en/privacy/' },
+} satisfies Record<string, Record<AppLocale, string>>;
+
 const OG_LOCALE: Record<AppLocale, string> = {
   es: 'es_ES',
   en: 'en_US',
