@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { IBM_Plex_Sans } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { SITE_URL, SITE_NAME } from '@/lib/metadata';
+import LocaleSwitcher from '@/components/LocaleSwitcher';
 import '../globals.css';
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -92,7 +93,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={ibmPlexSans.className}>
       <body className="bg-white text-blue dark:bg-black dark:text-white [color-scheme:light_dark] font-sans">
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          <LocaleSwitcher />
+          {children}
+        </NextIntlClientProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
