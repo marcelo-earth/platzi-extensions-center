@@ -1,11 +1,14 @@
 # build output
-dist/
-
-# generated types
-.astro/
+.next/
+out/
+build/
 
 # dependencies
 node_modules/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # logs
 npm-debug.log*
@@ -16,6 +19,10 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+.env*.local
 
 # macOS-specific files
 .DS_Store
+
+# vercel
+.vercel

@@ -1,39 +1,36 @@
 {
   "name": "platkey-center",
-  "type": "module",
   "version": "0.0.1",
   "private": true,
   "engines": {
     "node": "24.x"
   },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "format": "prettier --write .",
-    "astro:i18n": "npx astro-i18next generate && npm run format"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/react": "^6.0.1",
-    "@astrojs/sitemap": "^3.7.3",
-    "@fontsource-variable/ibm-plex-sans": "^5.2.6",
-    "@tailwindcss/vite": "^4.3.2",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "astro": "^7.0.7",
-    "astro-i18next": "^1.0.0-beta.17",
-    "classnames": "^2.3.2",
-    "lottie-react": "^2.3.1",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^12.1.5",
-    "react-intersection-observer": "^9.4.1"
+    "classnames": "^2.5.1",
+    "lottie-react": "^2.4.1",
+    "next": "^16.2.11",
+    "next-intl": "^4.13.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-intersection-observer": "^10.1.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "prettier": "^2.8.3",
-    "tailwindcss": "^4.3.2"
+    "@eslint/eslintrc": "^3.3.6",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.8",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.2.11",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2"
   }
 }
