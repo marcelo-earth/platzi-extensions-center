@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { getTranslator } from '../../lib/i18n';
+import { useTranslations } from 'next-intl';
 
 import classnames from 'classnames';
 import logo from '../../assets/platkey-logo.svg';
@@ -9,16 +11,12 @@ import brave from '../../assets/brave.webp';
 import safari from '../../assets/safari.webp';
 import platkeyinstalled from '../../assets/platkey-installed.webp';
 
-const APP_STORE_LINK = 'https://apps.apple.com/app/platkey/id1659587636 ';
+const APP_STORE_LINK = 'https://apps.apple.com/app/platkey/id1659587636';
 const CHROME_STORE_LINK =
   'https://chrome.google.com/webstore/detail/platkey/bdjedpeffgjikndcihipemgdinpcmpcf';
 
-interface HeroSectionProps {
-  lang?: 'es' | 'en';
-}
-
-function HeroSection({ lang = 'es' }: HeroSectionProps) {
-  const t = getTranslator(lang);
+function HeroSection() {
+  const t = useTranslations('Index');
 
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
@@ -148,26 +146,23 @@ function HeroSection({ lang = 'es' }: HeroSectionProps) {
               <div className="flex flex-col md:flex-row gap-x-4 w-full gap-y-4">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-darkblue text-white cursor-pointer hover:bg-skyblue/30 focus:ring-4 focus:outline-none focus:ring-skyblue/50 rounded-lg border border-skyblue px-5 py-2.5 focus:z-10 md:w-[50%] w-full transition"
                   href={CHROME_STORE_LINK}
                 >
                   <span className="text-xl font-bold">
-                    <span className="sr-only">
-                      {t('hero.message.install.on')}
-                    </span>
-                    Chrome{' '}
-                    <span className="font-light">({t('or')} Brave, Edge)</span>
+                    <span className="sr-only">{t('hero.message.installOn')}</span>
+                    Chrome <span className="font-light">({t('or')} Brave, Edge)</span>
                   </span>
                 </a>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-darkblue text-white cursor-pointer hover:bg-skyblue/30 focus:ring-4 focus:outline-none focus:ring-skyblue/50 rounded-lg border border-skyblue px-5 py-2.5 focus:z-10 md:w-[50%] w-full transition"
                   href={APP_STORE_LINK}
                 >
                   <span className="text-xl font-bold">
-                    <span className="sr-only">
-                      {t('hero.message.install.on')}
-                    </span>
+                    <span className="sr-only">{t('hero.message.installOn')}</span>
                     Apple Safari
                   </span>
                 </a>

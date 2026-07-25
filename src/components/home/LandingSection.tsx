@@ -1,7 +1,9 @@
+'use client';
+
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useInView } from 'react-intersection-observer';
 import classnames from 'classnames';
-import { getTranslator } from '../../lib/i18n';
+import { useTranslations } from 'next-intl';
 
 // Lazy load heavy components
 const LazyAnimationPlayer = lazy(() => import('./LazyAnimationPlayer'));
@@ -11,7 +13,6 @@ import platkeyssh from '../../assets/ssh.webp';
 import platkeysave from '../../assets/save.webp';
 import platkeyinterface from '../../assets/interface.webp';
 
-// TODO: Update this using the demo, maybe I don't need to declare a children prop
 type KeyProps = {
   children: React.ReactNode;
 };
@@ -59,12 +60,7 @@ type PlatKeyOptionProps = {
   optionText: string;
 };
 
-const PlatKeyOption = ({
-  keyPressed,
-  optionText,
-  letterKey,
-  numberKey,
-}: PlatKeyOptionProps) => {
+const PlatKeyOption = ({ keyPressed, optionText, letterKey, numberKey }: PlatKeyOptionProps) => {
   const shouldBeSelected = keyPressed === letterKey || keyPressed === numberKey;
   return (
     <div
@@ -89,20 +85,13 @@ const PlatKeyOption = ({
 };
 
 // Animation placeholder component
-const AnimationPlaceholder = ({ height = "300px" }: { height?: string }) => (
-  <div
-    className="flex items-center justify-center rounded-lg animate-pulse"
-    style={{ height }}
-  >
+const AnimationPlaceholder = ({ height = '300px' }: { height?: string }) => (
+  <div className="flex items-center justify-center rounded-lg animate-pulse" style={{ height }}>
     <div className="text-white text-lg">Loading animation...</div>
   </div>
 );
 
-interface LandingSectionProps {
-  lang?: 'es' | 'en';
-}
-
-function LandingSection({ lang = 'es' }: LandingSectionProps) {
+function LandingSection() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const key = event.key.toLowerCase();
@@ -116,8 +105,7 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
     };
   }, []);
 
-  const featureClassNames =
-    'flex flex-col justify-center items-center min-h-auto';
+  const featureClassNames = 'flex flex-col justify-center items-center min-h-auto';
   const [keyPressed, setKeyPressed] = useState<string>('');
 
   // Intersection observer hooks for lazy loading
@@ -141,7 +129,7 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
     threshold: 0.1,
   });
 
-  const t = getTranslator(lang);
+  const t = useTranslations('Index');
 
   return (
     <section className="min-h-screen bg-white dark:bg-darkblue px-4 flex justify-center">
@@ -178,8 +166,8 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
               {t('feature.shortcuts.instruction.04')} <Key>5</Key>...
             </p>
             <p className="text-blue dark:text-white inline text-2xl text-center">
-              {t('feature.shortcuts.instruction.05')} <Key>a</Key>, <Key>b</Key>
-              , <Key>c</Key>, <Key>d</Key>, <Key>e</Key>.
+              {t('feature.shortcuts.instruction.05')} <Key>a</Key>, <Key>b</Key>, <Key>c</Key>,{' '}
+              <Key>d</Key>, <Key>e</Key>.
             </p>
           </div>
           <div className="flex flex-col gap-y-3 w-full text-xl">
@@ -216,8 +204,8 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
           </div>
           <div className="flex flex-col gap-y-5 py-10 items-center">
             <p className="text-blue dark:text-white inline text-2xl text-center">
-              {t('feature.shortcuts.instruction.06.01')} <Key>0</Key> {t('or')}{' '}
-              <Key>x</Key> {t('feature.shortcuts.instruction.06.02')}
+              {t('feature.shortcuts.instruction.06.01')} <Key>0</Key> {t('or')} <Key>x</Key>{' '}
+              {t('feature.shortcuts.instruction.06.02')}
             </p>
           </div>
         </div>
@@ -236,11 +224,7 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
             <div className="rounded-lg bg-darkblue p-4">
               <Suspense fallback={<AnimationPlaceholder height="400px" />}>
                 {greenboardInView && (
-                  <LazyAnimationPlayer
-                    animationType="greenboard"
-                    width="100%"
-                    height="400px"
-                  />
+                  <LazyAnimationPlayer animationType="greenboard" width="100%" height="400px" />
                 )}
               </Suspense>
             </div>
@@ -261,7 +245,7 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
                 src={platkeysave.src}
                 width={platkeysave.width}
                 height={platkeysave.height}
-                alt={t('feature.save.title') + ''}
+                alt={t('feature.save.title')}
                 className="rounded-md w-full hover:scale-105 transition duration-300"
                 loading="lazy"
               />
@@ -279,18 +263,13 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
             <div className="rounded-lg bg-darkblue p-4">
               <Suspense fallback={<AnimationPlaceholder height="300px" />}>
                 {searchInView && (
-                  <LazyAnimationPlayer
-                    animationType="search"
-                    width="100%"
-                    height="300px"
-                  />
+                  <LazyAnimationPlayer animationType="search" width="100%" height="300px" />
                 )}
               </Suspense>
             </div>
             <p className="text-blue dark:text-white inline text-2xl text-center">
-              {t('feature.spotlight.instruction.01')} <Key>Ctrl</Key>+
-              <Key>K</Key> {t('feature.spotlight.instruction.02')}{' '}
-              <Key>Cmd</Key>+<Key>K</Key>{' '}
+              {t('feature.spotlight.instruction.01')} <Key>Ctrl</Key>+<Key>K</Key>{' '}
+              {t('feature.spotlight.instruction.02')} <Key>Cmd</Key>+<Key>K</Key>{' '}
               {t('feature.spotlight.instruction.03')}
             </p>
           </div>
@@ -302,8 +281,8 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
           <div className="flex flex-col gap-y-5 py-10">
             <p className="text-blue dark:text-white inline text-2xl text-center">
               {t('feature.classes.instruction.01')} <Key>Ctrl</Key>+<Key>B</Key>{' '}
-              {t('feature.spotlight.instruction.02')} <Key>Cmd</Key>+
-              <Key>B</Key> {t('feature.classes.instruction.03')}
+              {t('feature.spotlight.instruction.02')} <Key>Cmd</Key>+<Key>B</Key>{' '}
+              {t('feature.classes.instruction.03')}
             </p>
             <p className="text-blue dark:text-white inline text-2xl text-center">
               {t('feature.classes.instruction.01')} <Key>Shift</Key>
@@ -322,9 +301,8 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
               <Key>A</Key> {t('feature.classes.instruction.07')}
             </p>
             <p className="text-blue dark:text-white inline text-2xl text-center">
-              {t('feature.classes.instruction.01')} <Key>Ctrl</Key>+
-              <Key>Enter</Key> {t('feature.spotlight.instruction.02')}{' '}
-              <Key>Cmd</Key>+<Key>Enter</Key>{' '}
+              {t('feature.classes.instruction.01')} <Key>Ctrl</Key>+<Key>Enter</Key>{' '}
+              {t('feature.spotlight.instruction.02')} <Key>Cmd</Key>+<Key>Enter</Key>{' '}
               {t('feature.classes.instruction.08')}
             </p>
           </div>
@@ -344,7 +322,7 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
                 src={platkeyssh.src}
                 width={platkeyssh.width}
                 height={platkeyssh.height}
-                alt={t('feature.mode.title') + ''}
+                alt={t('feature.mode.title')}
                 className="rounded-md w-full"
                 loading="lazy"
               />
