@@ -1,0 +1,206 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Platzi Extension: Atajos de Teclado para Platzi",
+      "description": "Extensión de navegador gratuita y de código abierto para Platzi. Atajos de teclado, buscador aumentado, modo SSH y más herramientas de productividad.",
+      "keywords": "Platzi Extension, Platzi, extensión de navegador, extensión Chrome, extensión Safari, atajos de teclado, aprendizaje online, herramientas educativas, productividad, herramientas de estudio"
+    },
+    "love": {
+      "title": "Comparte Platzi Extension - Feedback y Soporte",
+      "description": "¿Te gusta Platzi Extension? Comparte el proyecto, danos tu opinión o reporta un problema. Tu feedback nos ayuda a mejorar.",
+      "keywords": "compartir Platzi Extension, feedback, soporte, extensión navegador, Platzi, opiniones, reporte problemas"
+    },
+    "privacy": {
+      "title": "Política de Privacidad - Platzi Extension",
+      "description": "Política de privacidad de Platzi Extension: cómo protegemos tu información y qué datos recopilamos en esta extensión de navegador.",
+      "keywords": "política de privacidad, Platzi Extension, privacidad, datos personales, extensión navegador, Platzi"
+    }
+  },
+  "SoftwareApplication": {
+    "description": "Una extensión de navegador que mejora tu experiencia de aprendizaje en Platzi con atajos de teclado, funciones interactivas y herramientas de productividad.",
+    "featureList": [
+      "Atajos de teclado para exámenes y quizzes",
+      "Greenboard interactivo para dibujar",
+      "Buscador mejorado",
+      "Navegación rápida entre clases",
+      "Sistema de guardado de aportes",
+      "Modo SSH para experiencia de línea de comandos"
+    ]
+  },
+  "Index": {
+    "or": "o",
+    "hero": {
+      "message": {
+        "big": "Nueva interfaz",
+        "normal": "Tu teclado aprenderá a hacer ",
+        "underline": "mucho más",
+        "install": "Instalar",
+        "installOn": "Instalar en",
+        "howitworks": "¿Cómo funciona Platzi Extension?",
+        "available": "Compatible con"
+      },
+      "install": {
+        "instruction": "Genial. Elige un navegador para instalar Platzi Extension"
+      },
+      "description": {
+        "01": "Platzi Extension es una herramienta para tu navegador que te ayuda a estudiar en Platzi",
+        "02": "Cuando la instales, podrás usar las siguientes características:"
+      }
+    },
+    "feature": {
+      "shortcuts": {
+        "title": "Completa los exámenes y quizzes sin usar el mouse",
+        "message": "Activa la opción Shortcuts.",
+        "instruction": {
+          "01": "Presiona ",
+          "02": " para seleccionar la primera opción.",
+          "03": " para seleccionar la segunda opción. Y así con ",
+          "04": " y ",
+          "05": "También funciona con",
+          "06": {
+            "01": "También puedes presionar",
+            "02": "para Saltar la pregunta."
+          }
+        }
+      },
+      "greenboard": {
+        "title": "o, usa el mouse para dibujar sobre el examen",
+        "message": "Activa la opción",
+        "instruction": {
+          "01": "Dentro de tu menú de opciones."
+        }
+      },
+      "spotlight": {
+        "title": "Usa el buscador expandible de forma instantánea",
+        "message": "Vista aumentada del buscador.",
+        "instruction": {
+          "01": "Presiona",
+          "02": "o",
+          "03": "para usar en el buscador aumentado"
+        }
+      },
+      "classes": {
+        "title": "Muévete a través de las clases con nuevos atajos",
+        "instruction": {
+          "01": "Presiona ",
+          "02": "o",
+          "03": "para abrir la lista de clases.",
+          "04": "para retroceder una clase.",
+          "05": "para avanzar una clase.",
+          "06": "para destacar una clase.",
+          "07": "para abrir el editor de aportes.",
+          "08": "para previsualizar tu contribución."
+        }
+      },
+      "save": {
+        "title": "Guarda contribuciones en tu Student Home",
+        "message": "No pierdas increíbles contribuciones de otros estudiantes como tú."
+      },
+      "mode": {
+        "title": "La experiencia de la línea de comandos en un examen.",
+        "message": "Usa el Modo SSH para activar el diseño de línea de comandos."
+      }
+    }
+  },
+  "Faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué es Platzi Extension?",
+        "answer": "Platzi Extension es una extensión de navegador de código abierto que añade atajos de teclado, un buscador aumentado, un modo SSH y otras herramientas de productividad a tu experiencia en Platzi."
+      },
+      {
+        "question": "¿Platzi Extension es gratis?",
+        "answer": "Sí, Platzi Extension es completamente gratuito y de código abierto."
+      },
+      {
+        "question": "¿En qué navegadores funciona Platzi Extension?",
+        "answer": "Platzi Extension funciona en Google Chrome, Microsoft Edge, Brave y Safari."
+      },
+      {
+        "question": "¿Platzi Extension recopila mis datos personales?",
+        "answer": "No. Platzi Extension no recopila ninguna información personal, tal como se detalla en su política de privacidad."
+      },
+      {
+        "question": "¿Platzi Extension es un producto oficial de Platzi?",
+        "answer": "No, Platzi Extension es un proyecto independiente de código abierto creado por la comunidad y no está afiliado oficialmente a Platzi."
+      },
+      {
+        "question": "¿Cómo instalo Platzi Extension?",
+        "answer": "Haz clic en el botón Instalar en la parte superior de esta página y sigue las instrucciones para tu navegador."
+      }
+    ]
+  },
+  "Love": {
+    "tweet": {
+      "heading": "💚 ¿Te gustó Platzi Extension?",
+      "subtext": "Si es así, ¡puedes twittear sobre este proyecto!",
+      "button": "Tweet"
+    },
+    "feedback": {
+      "heading": "🚀 ¿Quieres darnos tu opinión sobre Platzi Extension?",
+      "subtext": "¡Las ideas, comentarios y contribuciones de código siempre son bienvenidos!",
+      "button": "Danos tu Opinión"
+    },
+    "report": {
+      "heading": "😥 ¿Tuviste un problema con Platzi Extension?",
+      "subtext": "Reporta algo que no esté funcionando en tu extensión",
+      "button": "Reportar"
+    }
+  },
+  "Privacy": {
+    "heading": "Política de Privacidad",
+    "intro1": "@marcelo-earth creó Platzi Extension como una extensión de navegador de código abierto. Este SERVICIO es proporcionado por el equipo de contribución de código abierto de Platzi Extension sin costo alguno y está destinado a usarse tal cual.",
+    "intro2": "Esta página se utiliza para informar a los usuarios sobre mis políticas de recopilación, uso y divulgación de información personal si alguien decide usar mi Servicio.",
+    "intro3": "Los términos utilizados en esta Política de Privacidad tienen el mismo significado que en nuestros Términos y Condiciones, disponibles en Platzi Extension, salvo que se definan de otra manera en esta Política de Privacidad.",
+    "collection": {
+      "heading": "Recopilación y Uso de Información",
+      "body": "No recopilo ninguna información personal con Platzi Extension."
+    },
+    "cookies": {
+      "heading": "Cookies",
+      "body": "Este Servicio no utiliza estas «cookies» de forma explícita. Sin embargo, la extensión puede utilizar código y bibliotecas de terceros que sí usan «cookies» para recopilar información y mejorar sus servicios. Tienes la opción de aceptar o rechazar estas cookies y de saber cuándo se envía una cookie a tu dispositivo. Si eliges rechazar nuestras cookies, es posible que no puedas usar algunas partes de este Servicio."
+    },
+    "serviceProviders": {
+      "heading": "Proveedores de Servicios",
+      "intro": "Puedo emplear empresas e individuos externos por las siguientes razones:",
+      "list": [
+        "Para facilitar nuestro Servicio;",
+        "Para proporcionar el Servicio en nuestro nombre;",
+        "Para realizar servicios relacionados con el Servicio; o",
+        "Para ayudarnos a analizar cómo se utiliza nuestro Servicio."
+      ],
+      "outro": "Quiero informar a los usuarios de este Servicio que estos terceros tienen acceso a su información personal. La razón es realizar las tareas que se les asignan en nuestro nombre. Sin embargo, están obligados a no divulgar ni utilizar la información para ningún otro propósito."
+    },
+    "security": {
+      "heading": "Seguridad",
+      "body": "Valoro tu confianza al proporcionarnos tu información personal, por lo que nos esforzamos por utilizar medios comercialmente aceptables para protegerla. Pero recuerda que ningún método de transmisión por internet ni de almacenamiento electrónico es 100 % seguro y confiable, y no puedo garantizar su seguridad absoluta."
+    },
+    "links": {
+      "heading": "Enlaces a Otros Sitios",
+      "body": "Este Servicio puede contener enlaces a otros sitios. Si haces clic en un enlace de terceros, serás dirigido a ese sitio. Ten en cuenta que estos sitios externos no son operados por mí. Por lo tanto, te recomiendo encarecidamente que revises la Política de Privacidad de estos sitios web. No tengo control ni asumo responsabilidad alguna por el contenido, las políticas de privacidad o las prácticas de sitios o servicios de terceros."
+    },
+    "changes": {
+      "heading": "Cambios a esta Política de Privacidad",
+      "body": "Puedo actualizar nuestra Política de Privacidad de vez en cuando. Por ello, te recomiendo revisar esta página periódicamente para ver si hay cambios. Te notificaré cualquier cambio publicando la nueva Política de Privacidad en esta página."
+    },
+    "effectiveDate": "Esta política está vigente desde el 13 de diciembre de 2022",
+    "contact": {
+      "heading": "Contáctanos",
+      "body": "Si tienes alguna pregunta o sugerencia sobre mi Política de Privacidad, no dudes en contactarme a support@PlatKey.dev."
+    }
+  },
+  "Footer": {
+    "githubrepository": "Repositorio GitHub",
+    "issues": "Ayuda",
+    "contributions": "Contribuciones",
+    "faq": "Preguntas frecuentes",
+    "love": "Feedback y Soporte",
+    "privacy": "Política de Privacidad",
+    "disclaimer": "Todas las marcas comerciales, logotipos y nombres comerciales son propiedad de sus respectivos dueños. Todos los nombres de empresas, productos y servicios utilizados en este sitio web tienen únicamente fines de identificación. El uso de estos nombres, marcas registradas y marcas no implica aprobación.",
+    "copyright": "© 2022–2026 Platzi Extension. Todos los derechos reservados."
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma"
+  }
+}
