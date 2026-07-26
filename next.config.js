@@ -24,7 +24,7 @@ const nextConfig = {
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.platkey.dev' }],
-        destination: 'https://platkey.astronware.com/:path*',
+        destination: 'https://platzi-extensions.vercel.app/:path*',
         permanent: true,
       },
     ];

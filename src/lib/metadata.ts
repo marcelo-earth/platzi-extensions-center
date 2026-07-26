@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { routing, type AppLocale } from '@/i18n/routing';
 
-export const SITE_URL = 'https://platkey.astronware.com';
+export const SITE_URL = 'https://platzi-extensions.vercel.app';
 export const SITE_NAME = 'Platzi Extension';
 export const TWITTER_HANDLE = '@marcelo_earth';
 
