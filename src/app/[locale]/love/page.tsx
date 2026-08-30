@@ -42,7 +42,7 @@ export default async function LovePage({ params }: Props) {
           <p className="text-blue dark:text-white text-xl">{t('tweet.subtext')}</p>
           <div>
             <a
-              href="https://twitter.com/intent/tweet?text=Me encanta esta extensión&url=https://platkey.astronware.com&hashtags=platzi,chrome"
+              href="https://twitter.com/intent/tweet?text=Me encanta esta extensión&url=https://platzi-extensions.vercel.app&hashtags=platzi,chrome"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-skyblue active:ring text-darkblue font-bold py-2 px-6 rounded-lg text-xl"
