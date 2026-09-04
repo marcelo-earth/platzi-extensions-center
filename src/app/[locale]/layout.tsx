@@ -22,12 +22,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   authors: [{ name: 'Marcelo Arias', url: 'https://github.com/marcelo-earth' }],
   robots: { index: true, follow: true },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/favicon.ico',
-  },
   other: {
-    'msapplication-TileColor': '#0F172A',
+    'msapplication-TileColor': '#0AEA8A',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
   },

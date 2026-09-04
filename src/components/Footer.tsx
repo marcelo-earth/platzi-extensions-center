@@ -10,19 +10,19 @@ const Footer = async () => {
       <div className="flex flex-row flex-wrap justify-center gap-x-[2rem] gap-y-[2rem]">
         <a
           className="text-emerald-700 dark:text-green hover:underline"
-          href="https://github.com/marcelo-earth/platkey"
+          href="https://github.com/marcelo-earth/platzi-extensions"
         >
           {t('githubrepository')}
         </a>
         <a
           className="text-emerald-700 dark:text-green hover:underline"
-          href="https://github.com/marcelo-earth/platkey/issues"
+          href="https://github.com/marcelo-earth/platzi-extensions/issues"
         >
           {t('issues')}
         </a>
         <a
           className="text-emerald-700 dark:text-green hover:underline"
-          href="https://github.com/marcelo-earth/platkey#-contributing"
+          href="https://github.com/marcelo-earth/platzi-extensions#-contributing"
         >
           {t('contributions')}
         </a>
